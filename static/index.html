@@ -7,6 +7,16 @@
 </head>
 <body>
     <h1>Documents</h1>
+
+    <form id="search-form">
+        <input type="text" id="search-input" placeholder="Search documents..." autocomplete="off">
+        <button type="submit">Search</button>
+    </form>
+
+    <h2 id="results-heading" hidden>Results</h2>
+    <ul id="search-results"></ul>
+
+    <h2>All documents</h2>
     <ul id="document-list"></ul>
     <script src="script.js"></script>
 </body>

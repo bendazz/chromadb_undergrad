@@ -63,4 +63,17 @@ def get_documents():
         documents.append(dictionary)
     return documents
 
+@app.get('/search')
+def search(query: str):
+    results = collection.query(query_texts = [query],n_results = 5)
+    docs = []
+    for i in range(5):
+        dictionary = {
+            "id": results["ids"][0][i],
+            "document": results["documents"][0][i],
+            "distance": results["distances"][0][i],
+        }
+        docs.append(dictionary)
+    return docs
+
 app.mount("/", StaticFiles(directory="static", html=True), name="static")

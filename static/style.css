@@ -11,19 +11,55 @@ h1 {
     padding-bottom: 0.5rem;
 }
 
-#document-list {
+#search-form {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+#search-input {
+    flex: 1;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+#search-form button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+#search-form button:hover {
+    background: #1d4ed8;
+}
+
+#document-list,
+#search-results {
     list-style: none;
     padding: 0;
 }
 
-#document-list li {
+#document-list li,
+#search-results li {
     padding: 0.75rem;
     margin-bottom: 0.5rem;
     background: #f6f6f6;
     border-radius: 6px;
 }
 
-#document-list strong {
+#document-list strong,
+#search-results strong {
     color: #555;
     margin-right: 0.5rem;
+}
+
+#search-results em {
+    color: #888;
+    font-size: 0.9rem;
 }
